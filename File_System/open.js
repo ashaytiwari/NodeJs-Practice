@@ -1,11 +1,12 @@
 var fs = require('fs');
 
-fs.open('demo.txt', 'w+', function(err, f){
+const file = './demo.txt';
+
+fs.open(file, 'r', function(err, fd){
     if(err){
         console.log(err);
     }
     else{
-        console.log(f);
-        console.log("file Opened");
+        console.log(fd);
     }
 });
