@@ -5,7 +5,11 @@ fs.readFile('demo.txt', 'utf-8', function(err, data){
         console.log(err);
     }
     else{
-        console.log(data);
+        console.log('Asynchronous Reading:-', data);
     }
 });
 console.log('Reading Demo.txt');
+
+// Synchronous reading of file
+let data = fs.readFileSync('demo.txt', 'utf-8');
+console.log('Synchronous Reading:-', data);
